@@ -1,4 +1,4 @@
-pragma solidity >=0.5.6;
+pragma solidity >=0.5.3;
 
 contract Callee {
   uint temperature = 0;
@@ -14,6 +14,9 @@ contract Callee {
 
 contract easyNest {
   Callee callee;
+  constructor(Callee _callee) public {
+    callee = _callee;
+  }
   function raiseTemp(uint x) public {
     callee.tempDelta(x);
   }
