@@ -1,4 +1,5 @@
 pragma solidity >=0.5.3;
+pragma experimental ABIEncoderV2;
 
 contract Callee {
   uint temperature = 0;
